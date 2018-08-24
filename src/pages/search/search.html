@@ -1,0 +1,14 @@
+
+<ion-header>
+  <!--ionInput:当Searchbar输入发生变化时-->
+  <!--ionClear:当单击clear input按钮时发出-->
+  <!--ionCancel:当点击取消按钮时发出的-->
+  <ion-searchbar [(ngModel)]="text" (ionInput)="getSearchItems($event)" (ionBlur)="showSearchBody()"></ion-searchbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>

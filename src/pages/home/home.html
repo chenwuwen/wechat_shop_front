@@ -1,17 +1,50 @@
+<!--Ionic 头部组件,头部代码要写在在此处-->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <!--搜索框头-->
+  <search-header></search-header>
 </ion-header>
 
+<!--Ionic 主体,模版代码要写在这里,否则不显示-->
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-grid>
+
+  <!--轮播图-->
+    <ion-row>
+      <ion-col col-12>
+        <!-- 轮播:autoplay:2s之后开始轮播 loop:循环播放 pager:分页器（小圆点） pager=true -->
+        <ion-slides autoplay="2000" loop=true>
+          <ion-slide *ngFor="let item of slidesItems">
+            <img src="{{item.img}}" class="slide-image">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!--左侧聚划算特卖-->
+      <ion-col col-3>
+        <a href=""><img src="http://oss3.lanlanlife.com/d8224905c35777125602d48aa967c149_280x224.png" alt=""></a>
+      </ion-col>
+      <!--右侧-->
+      <ion-col col-9>
+        <!--热销榜单-->
+        <div>
+          <a href="">
+            <img src="http://oss3.lanlanlife.com/15dd7963ebae36be94607b88ffc66e32_130x466.png" alt="">
+          </a>
+        </div>
+
+        <div>
+          <!--今日必抢-->
+          <div><a href=""><img src="http://oss3.lanlanlife.com/da86b1093019c9e508ce5c79816ad7dd_132x224.png" alt=""></a>
+          </div>
+          <!--9.9包邮-->
+          <div><a href=""><img src="http://oss2.lanlanlife.com/d7e67f9af190f5645a728dcff4019bd6_132x222.png" alt=""></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

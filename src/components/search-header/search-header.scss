@@ -1,0 +1,69 @@
+search-header {
+
+}
+
+/* 搜索 栏 */
+.search{
+  width: 100%;
+  max-width: 750px;
+  padding: 7px 14px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FA7C54), to(#FD3F69));
+  background-image: -webkit-linear-gradient(left, #FA7C54 0%, #FD3F69 100%);
+  background-image: -o-linear-gradient(left, #FA7C54 0%, #FD3F69 100%);
+  background-image: linear-gradient(90deg, #FA7C54 0%, #FD3F69 100%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.search .search-href{
+  display: inline-block;
+  width: 100%;
+}
+.search .form{
+  width: 100%;
+  font-size: 12px;
+  display: inline-block;
+  position: relative;
+}
+.search .form .placeholder {
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.search .form .placeholder button{
+  width: 13px;
+  height: 13px;
+  background: url(//oss2.lanlanlife.com/57145c685260337e68ac19368eb72634_26x26.png) no-repeat;
+  background-size: 13px;
+  border: none;
+  margin-right: 5px;
+}
+.search input{
+  padding: 0 10px;
+  width: 100%;
+  height: 30px;
+  background: rgba(255,255,255,.4);
+  border: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-radius: 4px;
+  -webkit-appearance:none;
+}
+
