@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {NavController, Slides} from 'ionic-angular';
 
 /**
  * 新建一个页面：
@@ -14,10 +14,20 @@ import {NavController} from 'ionic-angular';
 })
 export class HomePage {
 
+  @ViewChild(Slides)
+  slides: Slides;
   slidesItems = [];
 
   constructor(public navCtrl: NavController) {
+    this.initSlides()
+  }
 
+  /**
+   * 在ionViewDidEnte生命周期里设置该参数 autoplayDisableOnInteraction 为false
+   */
+  ionViewDidEnter() {
+    //修复轮播手动滑动后不能自动轮播问题
+    this.slides.autoplayDisableOnInteraction = false;
   }
 
   /**
@@ -25,11 +35,8 @@ export class HomePage {
    */
   initSlides() {
     this.slidesItems = [
-      {img: 'assets/imgs/content-logo3.jpg'},
-      {img: 'assets/imgs/content-logo4.jpg'},
-      {img: 'assets/imgs/content-logo5.jpg'},
-      {img: 'assets/imgs/content-logo6.jpg'},
-      {img: 'assets/imgs/content-logo8.jpg'}
+      {img: 'http://oss.lanlanlife.com/45d61cf2cbd989dfde4eec6dd179c637_300x750.jpg'},
+      {img: 'http://oss.lanlanlife.com/0beb40697967ec9afd7a4cae84242d76_300x750.jpg'}
     ];
   }
 

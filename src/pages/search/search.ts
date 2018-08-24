@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the SearchPage page.
@@ -8,12 +8,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-search',
   templateUrl: 'search.html',
 })
 export class SearchPage {
+  searchText: string
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -22,4 +22,18 @@ export class SearchPage {
     console.log('ionViewDidLoad SearchPage');
   }
 
+  /**
+   * 返回上一个页面
+   * @param ev
+   */
+  backButtonClick(ev: Event) {
+    this.navCtrl.pop()
+  }
+
+  /**
+   * 清除输入框内文本
+   */
+  clearSearchText() {
+    this.searchText = ''
+  }
 }

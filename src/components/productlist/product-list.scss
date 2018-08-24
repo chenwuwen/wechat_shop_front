@@ -1,0 +1,127 @@
+product-list {
+
+}
+
+a {
+  text-decoration: none
+}
+
+.good {
+  padding: 15px 12px;
+  border-top: 1px solid #F1F1F1;
+  display: flex;
+}
+
+.good .cover-image {
+  width: 9.5em;
+  height: 9.5em;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+}
+
+.good .cover-image > img {
+  width: 100%;
+  height: 100%;
+  display: inline-block
+}
+
+.good .item-info {
+  margin-left: 0.1rem;
+  display: inline-block
+}
+
+.good .item-info .title {
+  width: 2.17rem;
+  height: 44px;
+  margin-bottom: .04rem;
+  line-height: 1.5;
+  color: #333;
+  font-size: 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.good .item-info p.rec {
+  height: 20px;
+  line-height: 20px;
+  color: #FB5413;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.good .count {
+  color: #C7C4C4;
+  font-size: 12px;
+  margin-top: .12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.good .count .alreadyBuy {
+  color: #B1AEAE;
+}
+
+.good .item-info .coupon {
+  height: .24rem;
+  line-height: .24rem;
+  margin-top: .12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.good .item-info .coupon .price {
+  color: #FC3D37;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.good .item-info .coupon .count-label.type-1 {
+  background: url(http://oss3.lanlanlife.com/caf1f155b1a83e1467bfa9e726814b8e_46x140.png) no-repeat;
+  background-size: 70px 23px;
+  padding-left: 9px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.good .item-info .coupon .count-label.type-2 {
+  background: url(http://oss1.lanlanlife.com/105634c31956b0be54ac867a209c26ca_46x140.png) no-repeat;
+  background-size: 70px 23px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.good .item-info .coupon .count-label {
+  width: 70px;
+  height: 23px;
+  color: #fff;
+  border-radius: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.good .item-info .coupon .count-label strong {
+  font-size: 14px;
+  font-weight: bold;
+}

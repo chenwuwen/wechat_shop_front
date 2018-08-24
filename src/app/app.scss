@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +13,10 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+//全局CSS 之前发现页面整体有一个padding:16px 的样式,通过谷歌控制台发现,这个样式在main.css中,于是去掉这个样式,但是我改了别的东西之后,这个样式又失效了
+//这说明main.css是打包后的css文件,如果需要设置全局css,在该配置文件中进行设置
+
+ion-app.md [padding] .scroll-content {
+  padding: 0px;
+}
