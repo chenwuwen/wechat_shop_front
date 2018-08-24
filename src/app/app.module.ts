@@ -9,6 +9,7 @@ import {ContactPage} from '../pages/contact/contact';
 import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {SearchPage} from "../pages/search/search";
+import {ProductPage} from "../pages/product/product";
 
 // ionic打包成app以后配置启动画面 以及导航条的服务
 import {StatusBar} from '@ionic-native/status-bar';
@@ -24,7 +25,8 @@ import {ComponentsModule} from "../components/components.module";
     ContactPage,
     HomePage,
     TabsPage,
-    SearchPage
+    SearchPage,
+    ProductPage
   ],
   imports: [/*引入的模块 依赖的模块*/
     BrowserModule,
@@ -44,7 +46,8 @@ import {ComponentsModule} from "../components/components.module";
     ContactPage,
     HomePage,
     TabsPage,
-    SearchPage
+    SearchPage,
+    ProductPage
   ],
   providers: [/*配置服务*/
     StatusBar,

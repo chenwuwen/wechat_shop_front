@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 
 /**
- * Generated class for the OverviewComponent component.
+ * Generated class for the ProductDetailComponent component.
  *
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
 @Component({
-  selector: 'overview',
-  templateUrl: 'overview.html'
+  selector: 'product-detail',
+  templateUrl: 'product-detail.html'
 })
-export class OverviewComponent {
+export class ProductDetailComponent {
 
   text: string;
 
   constructor() {
-    console.log('Hello OverviewComponent Component');
+    console.log('Hello ProductDetailComponent Component');
     this.text = 'Hello World';
   }
 

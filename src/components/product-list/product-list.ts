@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {InfiniteScroll, NavController} from 'ionic-angular';
+import {ProductPage} from "../../pages/product/product";
 
 /**
  * Generated class for the ProductlistComponent component.
@@ -31,5 +32,9 @@ export class ProductListComponent {
     // if (this.items.length > 90) {
     //   infiniteScroll.enable(false);   //没有数据的时候隐藏 ion-infinate-scroll
     // }
+  }
+
+  productDetail() {
+    this.navCtrl.push(ProductPage)
   }
 }

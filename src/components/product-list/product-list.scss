@@ -9,30 +9,32 @@ a {
 .good {
   padding: 15px 12px;
   border-top: 1px solid #F1F1F1;
-  display: flex;
+  display: flex; /*设为伸缩容器*/
+  flex-flow: row; /*伸缩项目单行排列*/
 }
 
 .good .cover-image {
-  width: 9.5em;
-  height: 9.5em;
+  width: 9em; /*固定宽度*/
+  height: 9em;
   vertical-align: top;
   display: inline-block;
   position: relative;
 }
 
-.good .cover-image > img {
+.good .cover-image .image {
   width: 100%;
   height: 100%;
   display: inline-block
 }
 
 .good .item-info {
-  margin-left: 0.1rem;
-  display: inline-block
+  margin-left: 1rem;
+  display: inline-block;
+  flex: 1; /*这里设置为占比1，填充满剩余空间*/
 }
 
 .good .item-info .title {
-  width: 2.17rem;
+  width: auto;
   height: 44px;
   margin-bottom: .04rem;
   line-height: 1.5;
@@ -48,8 +50,8 @@ a {
 }
 
 .good .item-info p.rec {
-  height: 20px;
-  line-height: 20px;
+  height: 10px;
+  line-height: 4px;
   color: #FB5413;
   font-size: 14px;
   white-space: nowrap;
@@ -58,7 +60,7 @@ a {
 .good .count {
   color: #C7C4C4;
   font-size: 12px;
-  margin-top: .12rem;
+  margin-top: 0.12em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +76,7 @@ a {
 .good .item-info .coupon {
   height: .24rem;
   line-height: .24rem;
-  margin-top: .12rem;
+  margin-top: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,7 +123,20 @@ a {
   align-items: center;
 }
 
+.good .item-info .coupon .price b {
+  font-size: 22px;
+}
+
 .good .item-info .coupon .count-label strong {
   font-size: 14px;
   font-weight: bold;
+}
+
+.good .item-info .title .tabsImg {
+  width: 13px;
+  margin-right: 5px
+}
+
+img {
+  border: 0;
 }

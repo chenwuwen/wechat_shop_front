@@ -1,0 +1,18 @@
+<ion-header>
+  <!--轮播图-->
+  <div class="swipe-main">
+    <!-- 轮播:autoplay:2s之后开始轮播  page表示轮播图开启显示当前页码 loop:循环播放 pager:分页器（小圆点）  -->
+    <ion-slides #Slides autoplay="2000" loop="true" pager=true>
+      <ion-slide *ngFor="let item of slidesItems">
+        <a href="">
+          <img src="{{item.img}}" class="slide-image">
+        </a>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>
