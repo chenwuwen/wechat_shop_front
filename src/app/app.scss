@@ -20,3 +20,37 @@
 ion-app.md [padding] .scroll-content {
   padding: 0px;
 }
+
+ion-app.ios [padding] .scroll-content {
+  padding: 0px;
+}
+
+b {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+i {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+ul {
+  list-sytle: none;
+}
+
+li {
+  list-style-type: none
+}
+
+img {
+  border: 0;
+}

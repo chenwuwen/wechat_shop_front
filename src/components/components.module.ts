@@ -6,18 +6,21 @@ import {IonicModule} from "ionic-angular";
 import {ProductListComponent} from './product-list/product-list';
 import {SearchHeaderComponent} from './search-header/search-header';
 import { ProductDetailComponent } from './product-detail/product-detail';
+import { SearchResultComponent } from './search-result/search-result';
 
 
 @NgModule({
   declarations: [
     ProductListComponent,
     SearchHeaderComponent,
-    ProductDetailComponent],
+    ProductDetailComponent,
+    SearchResultComponent],
   imports: [BrowserModule, IonicModule],
   exports: [
     ProductListComponent,
     SearchHeaderComponent,
-    ProductDetailComponent]
+    ProductDetailComponent,
+    SearchResultComponent]
 })
 export class ComponentsModule {
 }

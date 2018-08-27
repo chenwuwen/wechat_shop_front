@@ -34,7 +34,13 @@ export class ProductListComponent {
     // }
   }
 
+  /**
+   * 跳到商品详情页
+   */
   productDetail() {
-    this.navCtrl.push(ProductPage)
+    /*页面跳转可以添加变量*/
+    this.navCtrl.push(ProductPage, {
+      'dateTime': new Date()
+    })
   }
 }

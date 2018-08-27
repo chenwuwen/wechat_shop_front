@@ -5,7 +5,7 @@ import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
 // 页面,自定义组件
 import {AboutPage} from '../pages/about/about';
-import {ContactPage} from '../pages/contact/contact';
+import {DiscountPage} from '../pages/discount/discount';
 import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {SearchPage} from "../pages/search/search";
@@ -22,7 +22,7 @@ import {ComponentsModule} from "../components/components.module";
   declarations: [/*申明组件*/
     MyApp,
     AboutPage,
-    ContactPage,
+    DiscountPage,
     HomePage,
     TabsPage,
     SearchPage,
@@ -35,7 +35,15 @@ import {ComponentsModule} from "../components/components.module";
       /*隐藏全部子页面tabs*/
       tabsHideOnSubPages: 'true',
       /*配置返回按钮*/
-      backButtonText: ''
+      backButtonText: '',
+      /*设置返回的动画效果*/
+      modalEnter: 'modal-slide-in',
+      /*设置返回的动画效果*/
+      modalLeave: 'modal-slide-out',
+      /*把平台设置成iOS的风格*/
+      iconMode: 'ios',
+      /*引用iOS的返回图标*/
+      mode: 'ios'
     }),
     ComponentsModule
   ],
@@ -43,7 +51,7 @@ import {ComponentsModule} from "../components/components.module";
   entryComponents: [/*配置不会在模版中使用的组件*/
     MyApp,
     AboutPage,
-    ContactPage,
+    DiscountPage,
     HomePage,
     TabsPage,
     SearchPage,

@@ -1,4 +1,5 @@
-<ion-header>
+<ion-content padding>
+
   <!--轮播图-->
   <div class="swipe-main">
     <!-- 轮播:autoplay:2s之后开始轮播  page表示轮播图开启显示当前页码 loop:循环播放 pager:分页器（小圆点）  -->
@@ -9,10 +10,95 @@
         </a>
       </ion-slide>
     </ion-slides>
+    <a href="javascript:void(0)" (click)="backUpper()">
+      <img src="http://oss.lanlanlife.com/d863edbc1bc617db70e2c1144f4c1079_60x60.png" alt="" class="detail_return">
+    </a>
   </div>
-</ion-header>
 
+  <!--标题-->
+  <div class="detail-info">
+    <h3>
+      <i class="icon tmall"></i>
+      <span>金苹果中秋送礼月饼5饼5味</span>
+    </h3>
+    <p class="rec">精美礼盒装只要11.9</p>
+    <div class="price"><span class="title">券后价</span>
+      <span class="yPrice">¥12<s>.90</s></span>
+      <span class="oPrice">¥32.90</span>
+      <span class="monthSales">52821人已购</span>
+    </div>
+  </div>
+  <!--分隔线-->
+  <div class="divide"></div>
 
-<ion-content padding>
+  <!--淘口令-->
+  <div class="tpwd-copy">
+    <button id="copy-trigger-tpwd" data-clipboard-action="copy" data-clipboard-target="#copy_tpwd"
+            data-collection="_path=9001.CA.0.i.40485496431.e.1" class="copy-btn"><img
+      src="//oss.lanlanlife.com/3f75c9aed0c58300540c04ea703a3be2_36x36.png">
+      一键复制淘口令
+    </button>
+    <div data-collection="_path=9001.CA.0.i.40485496431.e.3" class="copy-area">
+      <div><textarea id="copy_tpwd" readonly="readonly">￥HAYdb2B3lAS￥</textarea>
+      </div>
+      <span>长按全选复制文字，然后打开［手机淘宝］即可领券购买</span></div>
+  </div>
 
+  <!--领券-->
+  <div class="coupon">
+    <a href="javascript:void (0)" data-collection="_path=9001.CA.0.i.40485496431.e.0">
+      <span class="amount"><s>￥</s><b>10</b></span>
+      <span class="time"><s><i>优惠券</i>使用期限</s><b>2018.08.26-2018.08.28</b></span>
+      <span class="go-coupon">立即领券</span></a>
+  </div>
+
+  <!--推荐语-->
+  <div class="recommend">
+    <label>推荐语</label>
+    <p>“【5金冠品质】多款多色任选，轻巧柔软，柔韧度更佳，加厚鞋底，穿着不累脚，居家浴室皆可！【赠送运费险】”</p>
+  </div>
+
+  <!--分隔线-->
+  <div class="divide"></div>
+
+  <!--商家信息-->
+  <div class="grade">
+    <img src="http://sqn1.lanlanlife.com/shop_rank_image_hg5.png">
+    <span class="name">卓雅家居日用百货商城</span>
+    <div class="dsr">
+      <span>宝贝描述<b>4.7</b><i class="up"></i></span>
+      <span>卖家服务<b>4.8</b><i class="up"></i></span>
+      <span>物流服务<b>4.8</b><i class="up"></i></span>
+    </div>
+  </div>
+
+  <!--分隔线-->
+  <div class="divide"></div>
+
+  <!--查看图文详情-->
+  <div class="multi-image">
+    <p>
+      <button>查看图文详情</button>
+    </p>
+  </div>
 </ion-content>
+
+
+<ion-footer style="height: 4.5em">
+  <div class="footer">
+    <ul>
+      <li>
+        <a href="/saber/index?pid=" class="home-link">
+          <img src="http://oss3.lanlanlife.com/ddfdbaa6b0ec0c4ba98622940b7b5ffb_40x38.png" alt="">
+          <span>首页</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void (0)" class="share-btn">
+          <img src="http://oss3.lanlanlife.com/9647feda49c08796a9782f85a1152f32_36x36.png" alt="">
+          <span>分享图片</span></a>
+      </li>
+      <li class="btn tpwd"><a href="javascript:void (0)">复制淘口令</a></li>
+    </ul>
+  </div>
+</ion-footer>

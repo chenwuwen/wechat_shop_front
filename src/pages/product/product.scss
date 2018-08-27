@@ -1,3 +1,369 @@
 page-product {
 
+  .swipe-main {
+    position: relative;
+  }
+
+  //标题
+  .detail-info {
+    position: relative;
+    padding: 15px;
+    background-color: #FFF;
+  }
+
+  .detail-info h3 {
+    color: #030303;
+    font-size: 16px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .detail-info .icon.tmall {
+    background: url(http://oss1.lanlanlife.com/3ea7c827b7ae0b763e95530b492ac59d_26x26.png) no-repeat;
+    background-size: 13px;
+
+  }
+
+  .detail-info .icon {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+
+  }
+
+  .detail-info p.rec {
+    margin-top: .13rem;
+    color: #F16628;
+    font-size: 1em;
+    line-height: 1;
+
+  }
+
+  .detail-info .price {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    padding-top: 12px;
+  }
+
+  .detail-info .price .title {
+    font-size: 0.12rem;
+    color: #696969;
+    margin-right: 0.05rem;
+  }
+
+  .detail-info .price .yPrice {
+    font-size: 0.2rem;
+    color: #FB610C;
+    margin-right: 0.05rem;
+  }
+
+  .detail-info .price .oPrice {
+    color: #C7C4C4;
+    font-size: 0.12rem;
+    text-decoration: line-through;
+  }
+
+  .detail-info .price .monthSales {
+    float: right;
+    color: #696969;
+    font-size: 0.12rem;
+  }
+
+  .divide {
+    height: 10px;
+    background: #F1F1F1;
+  }
+
+  //返回按钮
+  .detail_return {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 99;
+  }
+
+  //淘口令
+  .tpwd-copy {
+    padding: 13px;
+    text-align: center;
+  }
+
+  .tpwd-copy .copy-btn {
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#FEA358), to(#F81F11));
+    background: -webkit-linear-gradient(left, #FEA358, #F81F11);
+    background: -o-linear-gradient(left, #FEA358, #F81F11);
+    background: linear-gradient(to right, #FEA358, #F81F11);
+    border-radius: 4px 4px 0 0;
+    padding: 12px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .tpwd-copy button {
+    color: #FFF;
+    font-size: 14px;
+    border: none;
+  }
+
+  .tpwd-copy .copy-btn img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+
+  .tpwd-copy .copy-area {
+    color: #000;
+    font-size: 14px;
+    background: #FFF6F2;
+    text-align: center;
+    border: 1px dashed #FE814B;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+  }
+
+  .tpwd-copy .copy-area textarea {
+    width: 100%;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    margin-bottom: 5px;
+  }
+
+  //推荐语
+
+  .recommend, .grade {
+    padding: 15px;
+    background-color: #FFF;
+  }
+
+  .recommend label, .grade label {
+    position: absolute;
+    color: #030303;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+  }
+  .recommend p {
+    padding-left: 60px;
+    line-height: 1.4;
+    color: #696969;
+  }
+
+  .grade {
+    padding: 15px;
+    background-color: #FFF;
+  }
+  .grade img {
+    height: 10px;
+    vertical-align: middle;
+  }
+  .grade .name {
+    font-size: 1.5rem;
+    color: #030303;
+    margin-left: 0.1rem;
+    vertical-align: middle;
+  }
+  .grade .dsr {
+    margin-top: 20px;
+    font-size: 0;
+  }
+  .dsr span {
+    display: inline-block;
+    text-align: center;
+    color: #696969;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    margin-right: 2.4rem;
+  }
+  .dsr .up {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url(http://oss1.lanlanlife.com/68061408dc52928e999006abc815ad7f_22x20.png) no-repeat;
+    background-position: center;
+    background-size: 10px 10px;
+    margin-left: 5px;
+  }
+
+  //图文详情
+
+  .multi-image {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  .multi-image p button {
+    background-color: transparent;
+    color: #FE814B;
+    font-size: 14px;
+    padding: 1rem 2rem;
+    border: 1px solid #FE814B;
+    border-radius: 4px;
+  }
+
+  //页脚
+  .footer {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #FFF;
+    border-top: 1px solid #F3F3F3;
+  }
+  .footer li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .footer .home-link img {
+    width: 18px;
+    margin-top: 10px;
+  }
+
+  .footer .share-btn {
+    width: 0.60rem;
+    line-height: 1;
+  }
+
+  .footer li a, .footer li span {
+    display: block;
+    color: #7D8690;
+    text-align: center;
+  }
+
+  .footer .share-btn img {
+    width: 18px;
+    margin-top: 10px;
+  }
+
+  .footer li img {
+    width: 20px;
+    vertical-align: text-bottom;
+  }
+
+  .footer .share-btn span {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .footer li span {
+    display: block;
+    color: #7D8690;
+    text-align: center;
+  }
+
+  .footer .tpwd {
+    background: url(http://oss.lanlanlife.com/3729f62bfd7b3ca31015348c64d039db_55x110.png) no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .footer li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .footer .tpwd > a {
+    color: #FFF;
+  }
+
+  .footer li a, .footer li span {
+    display: block;
+    color: #7D8690;
+    text-align: center;
+  }
+
+  //领券
+  .coupon {
+    padding: 1em 2em;
+    height: 7em;
+    background-image: url(http://oss2.lanlanlife.com/f732110854173bec85ad7781a7592dcb_156x698.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #F1F1F1;
+    background-size: 90% 80%;
+  }
+
+  .coupon .amount {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    line-height: 5em;
+  }
+
+  .coupon .amount s {
+    color: #FA6A06;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .coupon .amount b {
+    color: #FA6A06;
+    font-size: 3em;
+  }
+
+  .coupon .time {
+    display: inline-block;
+    width: 10rem;
+    margin-left: 0.1rem;
+    height: 5em;
+  }
+
+  .coupon .time s {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.12rem;
+    margin-bottom: 0.05rem;
+    color: #696969;
+  }
+
+  .coupon .time i {
+    color: #FE814B;
+  }
+
+  .coupon .time b {
+    display: inline-block;
+    color: #696969;
+    font-size: 0.09rem;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-left: -1.09rem;
+  }
+
+  .coupon .go-coupon {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-right: 1em;
+    line-height: 5em;
+    float: right;
+  }
+
 }
+
