@@ -10,6 +10,7 @@ import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {SearchPage} from "../pages/search/search";
 import {ProductPage} from "../pages/product/product";
+import {ProductOfficialPage} from "../pages/product-official/product-official";
 
 // ionic打包成app以后配置启动画面 以及导航条的服务
 import {StatusBar} from '@ionic-native/status-bar';
@@ -17,6 +18,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 
 // 引入Components模块
 import {ComponentsModule} from "../components/components.module";
+import {ClipboardModule} from "ngx-clipboard";
 
 @NgModule({
   declarations: [/*申明组件*/
@@ -26,7 +28,8 @@ import {ComponentsModule} from "../components/components.module";
     HomePage,
     TabsPage,
     SearchPage,
-    ProductPage
+    ProductPage,
+    ProductOfficialPage
   ],
   imports: [/*引入的模块 依赖的模块*/
     BrowserModule,
@@ -45,7 +48,9 @@ import {ComponentsModule} from "../components/components.module";
       /*引用iOS的返回图标*/
       mode: 'ios'
     }),
-    ComponentsModule
+    ComponentsModule,
+    /*angular剪切板插件,不同angular版本使用该插件的不同版本https://github.com/maxisam/ngx-clipboard*/
+    ClipboardModule
   ],
   bootstrap: [IonicApp], /*启动的模块*/
   entryComponents: [/*配置不会在模版中使用的组件*/
@@ -55,7 +60,8 @@ import {ComponentsModule} from "../components/components.module";
     HomePage,
     TabsPage,
     SearchPage,
-    ProductPage
+    ProductPage,
+    ProductOfficialPage
   ],
   providers: [/*配置服务*/
     StatusBar,

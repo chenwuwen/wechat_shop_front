@@ -33,15 +33,18 @@
 
   <!--淘口令-->
   <div class="tpwd-copy">
-    <button id="copy-trigger-tpwd" data-clipboard-action="copy" data-clipboard-target="#copy_tpwd"
-            data-collection="_path=9001.CA.0.i.40485496431.e.1" class="copy-btn"><img
-      src="//oss.lanlanlife.com/3f75c9aed0c58300540c04ea703a3be2_36x36.png">
-      一键复制淘口令
+    <button (click)="copyTaoCommand($event)" ngxClipboard [cbContent]="taoCommand" (cbOnSuccess)="copyTaoCommandSuccess($event)" id="copy-trigger-tpwd" data-clipboard-action="copy"
+            data-clipboard-target="#copy_tpwd"
+            data-collection="_path=9001.CA.0.i.40485496431.e.1" class="copy-btn">
+      <img src="//oss.lanlanlife.com/3f75c9aed0c58300540c04ea703a3be2_36x36.png">
+      {{showText}}
     </button>
     <div data-collection="_path=9001.CA.0.i.40485496431.e.3" class="copy-area">
-      <div><textarea id="copy_tpwd" readonly="readonly">￥HAYdb2B3lAS￥</textarea>
+      <div>
+        <textarea id="copy_tpwd" readonly="readonly">{{taoCommand}}</textarea>
       </div>
-      <span>长按全选复制文字，然后打开［手机淘宝］即可领券购买</span></div>
+      <span>长按全选复制文字，然后打开［手机淘宝］即可领券购买</span>
+    </div>
   </div>
 
   <!--领券-->
@@ -84,7 +87,7 @@
 </ion-content>
 
 
-<ion-footer style="height: 4.5em">
+<ion-footer>
   <div class="footer">
     <ul>
       <li>
@@ -98,7 +101,7 @@
           <img src="http://oss3.lanlanlife.com/9647feda49c08796a9782f85a1152f32_36x36.png" alt="">
           <span>分享图片</span></a>
       </li>
-      <li class="btn tpwd"><a href="javascript:void (0)">复制淘口令</a></li>
+      <li class="btn tpwd" (click)="openModal()"><a href="javascript:void (0)">复制淘口令</a></li>
     </ul>
   </div>
 </ion-footer>

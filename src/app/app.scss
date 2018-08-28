@@ -45,6 +45,8 @@ i {
 
 ul {
   list-sytle: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 li {
@@ -53,4 +55,13 @@ li {
 
 img {
   border: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
 }

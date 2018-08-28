@@ -221,10 +221,6 @@ page-product {
   }
 
   //页脚
-  .footer {
-    width: 100%;
-    font-size: 13px;
-  }
 
   .footer ul {
     display: -webkit-box;
@@ -244,10 +240,14 @@ page-product {
     margin-top: 10px;
   }
 
-  .footer .share-btn {
-    width: 0.60rem;
-    line-height: 1;
+  .footer .home-link {
+    width: 5em;
   }
+
+  .footer .share-btn {
+    width: 5em;
+  }
+
 
   .footer li a, .footer li span {
     display: block;
@@ -263,11 +263,6 @@ page-product {
   .footer li img {
     width: 20px;
     vertical-align: text-bottom;
-  }
-
-  .footer .share-btn span {
-    font-size: 12px;
-    margin-top: 5px;
   }
 
   .footer li span {
