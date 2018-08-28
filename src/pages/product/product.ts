@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
-import {IonicPage, ModalController, NavController, NavParams, Slides} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams, PopoverController, Slides} from 'ionic-angular';
 import {ProductOfficialPage} from "../product-official/product-official";
+import {HomePage} from "../home/home";
 
 /**
  * Generated class for the ProductPage page.
@@ -23,8 +24,10 @@ export class ProductPage {
   taoCommand = "￥HAYdb2B3lAS￥"
   /*推荐语*/
   recommendText = ""
+  /*展示商品详情*/
+  showDetail = false
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public popoverCtrl: PopoverController) {
     /*页面跳转接收参数*/
     let date = this.navParams.get("dateTime");
     console.log(`页面跳转时间: ${date}`)
@@ -81,6 +84,9 @@ export class ProductPage {
   /**
    * ngx-clipboard 复制成功回调函数
    * https://segmentfault.com/a/1190000009704111
+   * 以上是该插件复制的一种方式,还有一种方式就是，通过在要复制的区域内,添加 #xxx
+   * 这个时候在按钮处添加指令 [ngxClipboard]="xxx" 即可
+   * https://github.com/maxisam/ngx-clipboard
    */
   copyTaoCommandSuccess(event: any) {
     console.log(event.target)
@@ -89,11 +95,27 @@ export class ProductPage {
 
   /**
    * 打开复制文案弹窗
+   * Ionic框架有3种弹窗 Popup 对话框  Popover 浮动窗口 Modal 新的弹窗，这样的弹窗，会占据整个页面，成为模态窗口
    */
   openModal() {
-    let officialModal = this.modalCtrl.create(ProductOfficialPage, {userId: 8675309});
+    // 之前的组件使用错误,应当使用PopoverController而非ModalController,对于弹出层而言
+    // let officialModal = this.modalCtrl.create(ProductOfficialPage, {userId: 8675309});
+    let officialModal = this.popoverCtrl.create(ProductOfficialPage, {userId: 8675309});
     officialModal.present();
   }
 
 
+  /**
+   * 展示商品详情
+   */
+  showProductDetail() {
+    this.showDetail = !this.showDetail;
+  }
+
+  /**
+   * 回到首页
+   */
+  backHome() {
+    this.navCtrl.push(HomePage);
+  }
 }

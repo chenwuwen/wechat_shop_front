@@ -7,6 +7,7 @@ import {ProductListComponent} from './product-list/product-list';
 import {SearchHeaderComponent} from './search-header/search-header';
 import { ProductDetailComponent } from './product-detail/product-detail';
 import { SearchResultComponent } from './search-result/search-result';
+import { ProductRecommendComponent } from './product-recommend/product-recommend';
 
 
 @NgModule({
@@ -14,13 +15,15 @@ import { SearchResultComponent } from './search-result/search-result';
     ProductListComponent,
     SearchHeaderComponent,
     ProductDetailComponent,
-    SearchResultComponent],
+    SearchResultComponent,
+    ProductRecommendComponent],
   imports: [BrowserModule, IonicModule],
   exports: [
     ProductListComponent,
     SearchHeaderComponent,
     ProductDetailComponent,
-    SearchResultComponent]
+    SearchResultComponent,
+    ProductRecommendComponent]
 })
 export class ComponentsModule {
 }

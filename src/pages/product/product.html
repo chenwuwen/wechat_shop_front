@@ -33,7 +33,8 @@
 
   <!--淘口令-->
   <div class="tpwd-copy">
-    <button (click)="copyTaoCommand($event)" ngxClipboard [cbContent]="taoCommand" (cbOnSuccess)="copyTaoCommandSuccess($event)" id="copy-trigger-tpwd" data-clipboard-action="copy"
+    <button (click)="copyTaoCommand($event)" ngxClipboard [cbContent]="taoCommand"
+            (cbOnSuccess)="copyTaoCommandSuccess($event)" id="copy-trigger-tpwd" data-clipboard-action="copy"
             data-clipboard-target="#copy_tpwd"
             data-collection="_path=9001.CA.0.i.40485496431.e.1" class="copy-btn">
       <img src="//oss.lanlanlife.com/3f75c9aed0c58300540c04ea703a3be2_36x36.png">
@@ -80,9 +81,10 @@
 
   <!--查看图文详情-->
   <div class="multi-image">
-    <p>
-      <button>查看图文详情</button>
+    <p [ngStyle]="{'display':showDetail?'none':'block'}">
+      <button (click)="showProductDetail()">查看图文详情</button>
     </p>
+    <product-detail [ngStyle]="{'display':showDetail?'block':'none'}"></product-detail>
   </div>
 </ion-content>
 
@@ -91,7 +93,7 @@
   <div class="footer">
     <ul>
       <li>
-        <a href="/saber/index?pid=" class="home-link">
+        <a href="javascript:void (0)" (click)="backHome()" class="home-link">
           <img src="http://oss3.lanlanlife.com/ddfdbaa6b0ec0c4ba98622940b7b5ffb_40x38.png" alt="">
           <span>首页</span>
         </a>

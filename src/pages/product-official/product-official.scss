@@ -1,4 +1,5 @@
 page-product-official {
+
   .text_alert {
     position: fixed;
     top: 0;
@@ -6,7 +7,7 @@ page-product-official {
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 0 15px;
   }
 
@@ -77,7 +78,7 @@ page-product-official {
   }
   .text_alert .alert .btn {
     display: inline-block;
-    width: 1.8rem;
+    width: 11.8rem;
     height: 40px;
     line-height: 40px;
     font-size: 14px;
@@ -94,4 +95,5 @@ page-product-official {
     font-size: 12px;
     background-color: #F6F7F6;
   }
+
 }

@@ -7,6 +7,8 @@ import {NavController, Slides} from 'ionic-angular';
  * 1.ionic g page pageName
  * 2.app.module.ts 引入声明组件
  * 3.被跳转页面引入声明的组件 this.navCtrl.push(pageName)
+ *
+ * Ionic生命周期 https://blog.csdn.net/wei11556/article/details/56484718
  */
 @Component({
   selector: 'page-home',
