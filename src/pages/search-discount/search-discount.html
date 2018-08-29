@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      输入商品链接
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="bubbleDiv">
+    <!--接收方DOM-->
+    <div class="bubbleItem">
+      <div class="doctor-head">
+        <img src="../assets/imgs/kf.png" alt="doctor">
+      </div>
+      <span class="bubble leftBubble">
+        您好，欢迎关注博客：http://write.blog.csdn.net/postlist
+        <span class="topLevel"></span>
+      </span>
+    </div>
+    <!--发送方DOM-->
+    <div class="bubbleItem clearfix">
+    <span class="bubble rightBubble">
+      方的观点是
+      <span class="topLevel"></span>
+    </span>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <footer class="chat-edit clearfix">
+
+    <!--由于此处并不是输入框,即 不是input ,textarea ,select 等等,所以使用[(ngModel)]会报错,错误如下,需要加上ngDefaultControl来解决-->
+    <!--Error: No value accessor for form control with unspecified name attribute-->
+    <!--HTML标签设置contenteditable="true"属性则可以对该标签进行编辑-->
+    <p class="chat-info" ChatInputComponent ngDefaultControl placeholder="想咨询他什么内容..." [(ngModel)]="product_url" contenteditable="true"></p>
+    <span class="uploadImg fl">
+      <input type="file" name="uploadfile" class="uploadfile">
+    </span>
+    <button class="send-btn fr" (click)="sendProductUrl()">发送</button>
+  </footer>
+</ion-footer>

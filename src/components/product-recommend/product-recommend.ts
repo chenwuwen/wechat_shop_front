@@ -32,7 +32,7 @@ export class ProductRecommendComponent {
   openRecommendModal() {
     setInterval(() => {
       this.getRecommendProduct()
-    }, 5000);
+    }, 60 * 1000);
   }
 
   /**

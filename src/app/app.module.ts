@@ -5,7 +5,7 @@ import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
 // 页面,自定义组件
 import {AboutPage} from '../pages/about/about';
-import {DiscountPage} from '../pages/discount/discount';
+import {SearchDiscountPage} from '../pages/search-discount/search-discount';
 import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {SearchPage} from "../pages/search/search";
@@ -24,7 +24,7 @@ import {ClipboardModule} from "ngx-clipboard";
   declarations: [/*申明组件*/
     MyApp,
     AboutPage,
-    DiscountPage,
+    SearchDiscountPage,
     HomePage,
     TabsPage,
     SearchPage,
@@ -56,7 +56,7 @@ import {ClipboardModule} from "ngx-clipboard";
   entryComponents: [/*配置不会在模版中使用的组件*/
     MyApp,
     AboutPage,
-    DiscountPage,
+    SearchDiscountPage,
     HomePage,
     TabsPage,
     SearchPage,
