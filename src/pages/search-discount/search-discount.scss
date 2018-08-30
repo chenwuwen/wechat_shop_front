@@ -61,31 +61,20 @@ page-search-discount {
     right: 1rem;
     bottom: 1rem;
   }
-  .clearfix:before, .clearfix:after {
-    display: table;
-    content: " ";
-  }
-  .clearfix:after {
-    clear: both;
-  }
-  .clearfix:before, .clearfix:after {
-    display: table;
-    content: " ";
-  }
 
- //聊天页面
+  //聊天页面
   .bubbleItem {
     width: 100%;
     position: relative;
   }
-  .doctor-head {
+  .master-head {
     width: 4rem;
     box-sizing: border-box;
     position: absolute;
     height: 4rem;
     top: 2rem;
   }
-  .doctor-head img {
+  .master-head img {
     width: 100%;
     border-radius: 50rem;
     box-sizing: border-box;
@@ -126,5 +115,17 @@ page-search-discount {
     right: -8px;
     border-bottom: 10px solid #6F83FF;
     border-right: 10px solid transparent;
+  }
+
+  .clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  .clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";
   }
 }

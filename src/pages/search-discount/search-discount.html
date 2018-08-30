@@ -8,24 +8,40 @@
 
 <ion-content>
   <div class="bubbleDiv">
-    <!--接收方DOM-->
-    <div class="bubbleItem">
-      <div class="doctor-head">
-        <img src="../assets/imgs/kf.png" alt="doctor">
-      </div>
-      <span class="bubble leftBubble">
-        您好，欢迎关注博客：http://write.blog.csdn.net/postlist
+
+    <!--&lt;!&ndash;接收方DOM&ndash;&gt;-->
+    <!--<div class="bubbleItem">-->
+    <!--<div class="master-head">-->
+    <!--<img src="../assets/imgs/kf.png" alt="doctor">-->
+    <!--</div>-->
+    <!--<span class="bubble leftBubble">-->
+    <!--客服说-->
+    <!--<span class="topLevel"></span>-->
+    <!--</span>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;发送方DOM&ndash;&gt;-->
+    <!--<div class="bubbleItem clearfix">-->
+    <!--<span class="bubble rightBubble">-->
+    <!--访客说-->
+    <!--<span class="topLevel"></span>-->
+    <!--</span>-->
+    <!--</div>-->
+
+    <ng-container *ngFor="let message of messages">
+      <div class="bubbleItem" [ngClass]="{'clearfix':message.sender==constant.CHAT_TYPE_GUEST}">
+        <div class="master-head" [ngStyle]="{'display':message.sender==constant.CHAT_TYPE_MASTER?'block':'none'}">
+          <img src="../assets/imgs/kf.png" alt="master">
+        </div>
+        <span class="bubble"
+              [ngClass]="{'leftBubble':message.sender==constant.CHAT_TYPE_MASTER,'rightBubble':message.sender==constant.CHAT_TYPE_GUEST}">
+        {{message.message_content}}
         <span class="topLevel"></span>
       </span>
-    </div>
-    <!--发送方DOM-->
-    <div class="bubbleItem clearfix">
-    <span class="bubble rightBubble">
-      方的观点是
-      <span class="topLevel"></span>
-    </span>
-    </div>
+      </div>
+    </ng-container>
   </div>
+
+
 </ion-content>
 
 <ion-footer>
@@ -34,7 +50,8 @@
     <!--由于此处并不是输入框,即 不是input ,textarea ,select 等等,所以使用[(ngModel)]会报错,错误如下,需要加上ngDefaultControl来解决-->
     <!--Error: No value accessor for form control with unspecified name attribute-->
     <!--HTML标签设置contenteditable="true"属性则可以对该标签进行编辑-->
-    <p class="chat-info" ChatInputComponent ngDefaultControl placeholder="想咨询他什么内容..." [(ngModel)]="product_url" contenteditable="true"></p>
+    <!--<p class="chat-info"  placeholder="想咨询他什么内容..." [(ngModel)]="product_url" contenteditable="true"></p>-->
+    <chat-input name="product_url" [(ngModel)]="product_url"></chat-input>
     <span class="uploadImg fl">
       <input type="file" name="uploadfile" class="uploadfile">
     </span>

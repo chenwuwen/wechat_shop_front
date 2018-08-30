@@ -8,6 +8,7 @@ import {SearchHeaderComponent} from './search-header/search-header';
 import { ProductDetailComponent } from './product-detail/product-detail';
 import { SearchResultComponent } from './search-result/search-result';
 import { ProductRecommendComponent } from './product-recommend/product-recommend';
+import { ChatInputComponent } from './chat-input/chat-input';
 
 
 @NgModule({
@@ -16,14 +17,16 @@ import { ProductRecommendComponent } from './product-recommend/product-recommend
     SearchHeaderComponent,
     ProductDetailComponent,
     SearchResultComponent,
-    ProductRecommendComponent],
+    ProductRecommendComponent,
+    ChatInputComponent],
   imports: [BrowserModule, IonicModule],
   exports: [
     ProductListComponent,
     SearchHeaderComponent,
     ProductDetailComponent,
     SearchResultComponent,
-    ProductRecommendComponent]
+    ProductRecommendComponent,
+    ChatInputComponent]
 })
 export class ComponentsModule {
 }

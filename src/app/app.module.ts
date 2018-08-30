@@ -20,6 +20,9 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {ComponentsModule} from "../components/components.module";
 import {ClipboardModule} from "ngx-clipboard";
 
+// 引入Provider模块 provider，也叫service。前者是ionic的叫法，后者是ng的叫法
+import { ConstantProvider } from '../providers/constant';
+
 @NgModule({
   declarations: [/*申明组件*/
     MyApp,
@@ -50,7 +53,7 @@ import {ClipboardModule} from "ngx-clipboard";
     }),
     ComponentsModule,
     /*angular剪切板插件,不同angular版本使用该插件的不同版本https://github.com/maxisam/ngx-clipboard*/
-    ClipboardModule
+    ClipboardModule,
   ],
   bootstrap: [IonicApp], /*启动的模块*/
   entryComponents: [/*配置不会在模版中使用的组件*/
@@ -66,7 +69,8 @@ import {ClipboardModule} from "ngx-clipboard";
   providers: [/*配置服务*/
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConstantProvider
   ]
 })
 export class AppModule {
