@@ -100,6 +100,9 @@ export class ProductPage {
   openModal() {
     // 之前的组件使用错误,应当使用PopoverController而非ModalController,对于弹出层而言
     // let officialModal = this.modalCtrl.create(ProductOfficialPage, {userId: 8675309});
+    // 使用popove弹出的并不是一个盒子，而是一个页面，但我们可以控制页面的大小，位置来实现我们的要求
+    //create（）里面有三个参数create(component, data, opts)，component：你要弹出的页面的名字，data：你想要往该页面内传入的数据 ， opts：popover的选项
+    // 具体在说一下opts：它里面也有三个参数 cssClass：控制popover的样式（我一般不用，我都是直接去控制台在类名，直接控制）  showBackdrop：是否显示背景，默认为true（不用改，改了之后反而用不了）  enableBackdropDismiss：是否通过点击背景让盒子消失，默认为true（不用改，改了之后反而用不了）
     let officialModal = this.popoverCtrl.create(ProductOfficialPage, {userId: 8675309});
     officialModal.present();
   }

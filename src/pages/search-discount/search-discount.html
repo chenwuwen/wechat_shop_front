@@ -55,6 +55,7 @@
     <span class="uploadImg fl">
       <input type="file" name="uploadfile" class="uploadfile">
     </span>
+    <tip [ngStyle]="{'display':tip_show?'block':'none'}" [tip_text]="tip_content"></tip>
     <button class="send-btn fr" (click)="sendProductUrl()">发送</button>
   </footer>
 </ion-footer>

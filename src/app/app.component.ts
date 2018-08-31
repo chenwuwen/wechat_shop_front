@@ -5,6 +5,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
+/**
+ * 创建组件命令：ionic g page xxx
+ * 创建页面命令：ionic g component xxx
+ * 创建服务命令：ionic g provider  xxx
+ */
 @Component({
   templateUrl: 'app.html'
 })

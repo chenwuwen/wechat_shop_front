@@ -1,0 +1,26 @@
+tip {
+  .tooltip {
+    width: 120px;
+    padding: 10px;
+    border-radius: 3px;
+    position: absolute;
+    box-shadow: 1px 1px 10px 0 #ccc;
+    margin: -500px 0 0 -20px;
+    background: #fff;
+    -webkit-transition: margin .5s ease-in-out;
+    -moz-transition: margin .5s ease-in-out;
+  }
+  .tooltip {
+
+  }
+
+  .arrow {
+    position: absolute;
+    margin: 10px 0 0 80px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+  }
+}

@@ -32,7 +32,7 @@ import { ConstantProvider } from '../providers/constant';
     TabsPage,
     SearchPage,
     ProductPage,
-    ProductOfficialPage
+    ProductOfficialPage,
   ],
   imports: [/*引入的模块 依赖的模块*/
     BrowserModule,
@@ -64,7 +64,7 @@ import { ConstantProvider } from '../providers/constant';
     TabsPage,
     SearchPage,
     ProductPage,
-    ProductOfficialPage
+    ProductOfficialPage,
   ],
   providers: [/*配置服务*/
     StatusBar,

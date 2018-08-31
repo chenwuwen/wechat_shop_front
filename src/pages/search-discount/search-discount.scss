@@ -128,4 +128,11 @@ page-search-discount {
     display: table;
     content: " ";
   }
+
+  tip {
+    bottom: 4rem;
+    right: 1rem;
+    -webkit-transition: margin .15s ease-in-out;
+    -moz-transition: margin .15s ease-in-out;
+  }
 }

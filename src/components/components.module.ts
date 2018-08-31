@@ -9,6 +9,8 @@ import { ProductDetailComponent } from './product-detail/product-detail';
 import { SearchResultComponent } from './search-result/search-result';
 import { ProductRecommendComponent } from './product-recommend/product-recommend';
 import { ChatInputComponent } from './chat-input/chat-input';
+import { BackTopComponent } from './back-top/back-top';
+import { TipComponent } from './tip/tip';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ChatInputComponent } from './chat-input/chat-input';
     ProductDetailComponent,
     SearchResultComponent,
     ProductRecommendComponent,
-    ChatInputComponent],
+    ChatInputComponent,
+    BackTopComponent,
+    TipComponent],
   imports: [BrowserModule, IonicModule],
   exports: [
     ProductListComponent,
@@ -26,7 +30,9 @@ import { ChatInputComponent } from './chat-input/chat-input';
     ProductDetailComponent,
     SearchResultComponent,
     ProductRecommendComponent,
-    ChatInputComponent]
+    ChatInputComponent,
+    BackTopComponent,
+    TipComponent]
 })
 export class ComponentsModule {
 }

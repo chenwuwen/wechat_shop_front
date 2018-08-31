@@ -13,6 +13,8 @@ export class SearchDiscountPage {
   /*商品链接*/
   product_url = ""
   messages: Array<MessageModel> = []
+  tip_content = ""
+  tip_show = false
 
   constructor(public navCtrl: NavController, public constant: ConstantProvider) {
     for (let i = 0; i < 5; i++) {
@@ -39,6 +41,16 @@ export class SearchDiscountPage {
    */
   sendProductUrl() {
     console.log("发送的链接是：", this.product_url)
+    if (this.product_url == "") {
+      console.log("发送内容为空,发起弹窗！")
+      if (!this.tip_show) {
+        this.tip_content = "不能发送空白消息"
+        // 显示消息弹窗
+        this.tip_show = !this.tip_show
+        setTimeout(() => this.tip_show = !this.tip_show, 3 * 1000)
+      }
+      return false;
+    }
     let message: MessageModel = {
       message_content: this.product_url,
       sender: this.constant.CHAT_TYPE_GUEST,
