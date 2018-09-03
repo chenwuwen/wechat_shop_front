@@ -6,6 +6,12 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 // https://blog.thoughtram.io/angular/2016/07/27/custom-form-controls-in-angular-2.html
 
 /**
+ * writeValue是在初始化的时候将formControl的值传递给原生表单控件；
+ * registerOnChange用来获取原生表单控件的值更新时通知Angular表单控件更新的函数；
+ * registerOnTouched用来获取通知用户正在交互的函数
+ */
+
+/**
  * 必须注册成为表单组件（使用providers属性）
  * 注释：
  * 1.provide：将组件注册到DI框架，让其成为一个可被表单访问的组件
@@ -69,8 +75,8 @@ export class ChatInputComponent implements ControlValueAccessor {
    * 将模型中的新值写入视图或DOM元素属性中
    */
   writeValue(obj: any): void {
-    console.log("writeValue方法: ", obj)
     if (obj) {
+      console.log("writeValue方法: ", obj)
       this.product_url = obj;
     }
   }

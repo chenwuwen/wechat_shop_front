@@ -3,15 +3,11 @@ tip {
     width: 120px;
     padding: 10px;
     border-radius: 3px;
-    position: absolute;
+    
     box-shadow: 1px 1px 10px 0 #ccc;
-    margin: -500px 0 0 -20px;
     background: #fff;
     -webkit-transition: margin .5s ease-in-out;
     -moz-transition: margin .5s ease-in-out;
-  }
-  .tooltip {
-
   }
 
   .arrow {

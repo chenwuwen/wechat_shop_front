@@ -129,10 +129,13 @@ page-search-discount {
     content: " ";
   }
 
+// 弹窗样式,通过调节margin来移动位置
   tip {
-    bottom: 4rem;
-    right: 1rem;
+    position: absolute;
     -webkit-transition: margin .15s ease-in-out;
     -moz-transition: margin .15s ease-in-out;
+    bottom: 4.5rem;
+    right: 2rem;
+    z-index: 999;
   }
 }
