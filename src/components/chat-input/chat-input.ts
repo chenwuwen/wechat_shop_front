@@ -34,7 +34,7 @@ export const EXE_COUNTER_VALUE_ACCESSOR: any = {
 export class ChatInputComponent implements ControlValueAccessor {
 
   @Input()
-  product_url: string = "";
+  _product_url: string = "sss";
 
   constructor() {
     console.log('=======自定义表单控件初始化========');
@@ -42,13 +42,13 @@ export class ChatInputComponent implements ControlValueAccessor {
 
   get value(): any {
     console.log("get value() 执行........")
-    return this.product_url;
+    return this._product_url;
   };
 
   set value(v: any) {
     console.log("set value() 执行........")
-    if (v !== this.product_url) {
-      this.product_url = v;
+    if (v !== this._product_url) {
+      this._product_url = v;
       this.propagateChange(v);
     }
   }
@@ -60,12 +60,12 @@ export class ChatInputComponent implements ControlValueAccessor {
    */
   propagateChange = (_: any) => {
     console.log("自定义表单控件,输入的商品链接是：", _)
-    this.product_url = _
+    this._product_url = _
   };
 
   propagateTouch = () => {
     console.log("自定义表单控件,输入的商品链接是：")
-    // this.product_url = _
+    // this._product_url = _
   };
 
 
@@ -75,9 +75,10 @@ export class ChatInputComponent implements ControlValueAccessor {
    * 将模型中的新值写入视图或DOM元素属性中
    */
   writeValue(obj: any): void {
-    if (obj) {
-      console.log("writeValue方法: ", obj)
-      this.product_url = obj;
+    console.log("writeValue方法: ", obj)
+    if (obj == "" || obj == null || obj == undefined) {
+      console.log("消息发送成功,将输入框内容置为空");
+      this._product_url = "";
     }
   }
 
@@ -117,9 +118,9 @@ export class ChatInputComponent implements ControlValueAccessor {
   inputText(event: any) {
     let text = event.target.childNodes[0].nodeValue.trim()
     console.log("自定义组件,输入链接的内容：", text)
-    if (text != this.product_url && text != 'undifiend' && text != '') {
-      this.product_url = text
-      this.propagateChange(this.product_url)
+    if (text != this._product_url && text != 'undifiend' && text != '') {
+      this._product_url = text
+      this.propagateChange(this._product_url)
     }
   }
 }

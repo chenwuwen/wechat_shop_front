@@ -43,6 +43,7 @@ export class SearchDiscountPage {
     console.log("发送的链接是：", this.product_url)
     if (this.product_url == "") {
       console.log("发送内容为空,发起弹窗！")
+      this.product_url = "sss_aa"
       if (!this.tip_show) {
         this.tip_content = "不能发送空白消息"
         // 显示消息弹窗
